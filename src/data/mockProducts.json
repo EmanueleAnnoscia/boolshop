@@ -1,0 +1,103 @@
+
+{
+  "products": [
+    {
+      "id": 1,
+      "slug": "abstract-waves-ocean",
+      "name": "Abstract Waves - Ocean",
+      "price": 45.00,
+      "originalPrice": 60.00,
+      "description": "Una composizione astratta che cattura l'essenza dell'oceano attraverso forme fluide e colori profondi.",
+      "image": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=600&fit=crop&crop=center",
+      "category": "Abstract",
+      "inStock": 15,
+      "isNew": true,
+      "isFeatured": true,
+      "onSale": true
+    },
+    {
+      "id": 2,
+      "slug": "minimal-geometric-sunset",
+      "name": "Minimal Geometric - Sunset",
+      "price": 38.00,
+      "description": "Geometrie essenziali che si incontrano con i colori caldi del tramonto.",
+      "image": "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&h=600&fit=crop&crop=center",
+      "category": "Geometric",
+      "inStock": 8,
+      "isNew": true,
+      "isFeatured": false,
+      "onSale": false
+    },
+    {
+      "id": 3,
+      "slug": "botanical-serenity",
+      "name": "Botanical Serenity",
+      "price": 42.00,
+      "description": "La bellezza della natura catturata in forme botaniche delicate e armoniose.",
+      "image": "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=800&h=600&fit=crop&crop=center",
+      "category": "Nature",
+      "inStock": 3,
+      "isNew": false,
+      "isFeatured": true,
+      "onSale": false
+    },
+    {
+      "id": 4,
+      "slug": "urban-shadows",
+      "name": "Urban Shadows",
+      "price": 52.00,
+      "description": "L'architettura urbana reinterpretata attraverso giochi di luce e ombra.",
+      "image": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop&crop=center",
+      "category": "Architecture",
+      "inStock": 12,
+      "isNew": false,
+      "isFeatured": true,
+      "onSale": false
+    },
+    {
+      "id": 5,
+      "slug": "pastel-dreams",
+      "name": "Pastel Dreams",
+      "price": 35.00,
+      "originalPrice": 50.00,
+      "description": "Tonalità pastello che si fondono in un sogno di colore e forma.",
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop&crop=center",
+      "category": "Abstract",
+      "inStock": 0,
+      "isNew": false,
+      "isFeatured": false,
+      "onSale": true
+    },
+    {
+      "id": 6,
+      "slug": "monochrome-elegance",
+      "name": "Monochrome Elegance",
+      "price": 48.00,
+      "description": "L'eleganza del bianco e nero in una composizione contemporanea.",
+      "image": "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=800&h=600&fit=crop&crop=center",
+      "category": "Monochrome",
+      "inStock": 7,
+      "isNew": true,
+      "isFeatured": false,
+      "onSale": false
+    }
+  ],
+  "coupons": [
+    {
+      "code": "WELCOME10",
+      "discount": 10,
+      "type": "percentage",
+      "validFrom": "2024-01-01",
+      "validTo": "2024-12-31",
+      "minAmount": 30
+    },
+    {
+      "code": "FIRST50",
+      "discount": 5,
+      "type": "fixed",
+      "validFrom": "2024-01-01",
+      "validTo": "2024-06-30",
+      "minAmount": 0
+    }
+  ]
+}
