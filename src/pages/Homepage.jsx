@@ -9,7 +9,7 @@ import styles from './Homepage.module.css';
 const Homepage = () => {
   const { dispatch } = useAppContext();
   const [heroSlide, setHeroSlide] = useState(0);
-
+  
   const heroSlides = [
     {
       image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=1200&h=800&fit=crop&crop=center",
