@@ -1,17 +1,22 @@
-
-import React, { useState } from 'react';
-import { useAppContext } from '../context/AppContext';
+import React, { useState, useEffect } from 'react';
 import { newsletterAPI } from '../services/api';
 import styles from './WelcomePopup.module.css';
 
 const WelcomePopup = () => {
-  const { showWelcomePopup, dispatch } = useAppContext();
+  const [visible, setVisible] = useState(false);
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
 
+  useEffect(() => {
+    const alreadyVisited = localStorage.getItem('boolshop_visited');
+    if (!alreadyVisited) {
+      setVisible(true);
+    }
+  }, []);
+
   const handleClose = () => {
-    dispatch({ type: 'HIDE_WELCOME_POPUP' });
+    setVisible(false);
     localStorage.setItem('boolshop_visited', 'true');
   };
 
@@ -22,18 +27,18 @@ const WelcomePopup = () => {
     setIsSubmitting(true);
     try {
       await newsletterAPI.subscribe(email);
-      setMessage('Grazie! Ti abbiamo inviato un\'email di benvenuto.');
+      setMessage("Grazie! Ti abbiamo inviato un'email di benvenuto.");
       setTimeout(() => {
         handleClose();
       }, 2000);
     } catch (error) {
-      setMessage('Errore durante l\'iscrizione. Riprova più tardi.');
+      setMessage("Errore durante l'iscrizione. Riprova più tardi.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  if (!showWelcomePopup) return null;
+  if (!visible) return null;
 
   return (
     <div className={styles.overlay}>
@@ -41,13 +46,13 @@ const WelcomePopup = () => {
         <button className={styles.closeButton} onClick={handleClose}>
           ✕
         </button>
-        
+
         <div className={styles.content}>
           <h2 className={styles.title}>Benvenuto in BoolShop!</h2>
           <p className={styles.subtitle}>
             Scopri la nostra collezione di stampe d'arte esclusive
           </p>
-          
+
           <form onSubmit={handleSubmit} className={styles.form}>
             <input
               type="email"
