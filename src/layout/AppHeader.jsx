@@ -16,7 +16,7 @@ const AppHeader = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      navigate(`/search?q=${searchQuery.trim()}`);
     }
   };
 
